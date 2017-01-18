@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_progress_dialog_test"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.qxg.study.studyandroid.view.ProgressDialog.ProgressDialogTest">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <Button
+                android:text="简单用法"
+                android:id="@+id/simple_progress_dialog"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:text="圆形进度并设置按钮"
+                android:id="@+id/circle_progress_dialog"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:text="进度条方式并设置按钮"
+                android:id="@+id/long_progress_dialog"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

@@ -30,7 +30,8 @@
                 <category android:name="com.qxg.category.t1" />
             </intent-filter>
         </activity>
-        <activity android:name=".view.AlertDialog.AlertDialogTest"></activity>
+        <activity android:name=".view.AlertDialog.AlertDialogTest" />
+        <activity android:name=".view.ProgressDialog.ProgressDialogTest"></activity>
     </application>
 
 </manifest>
