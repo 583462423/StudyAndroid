@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="glideimagegetter-1.0.1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.zzhoujay.glideimagegetter/glideimagegetter/1.0.1/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.zzhoujay.glideimagegetter/glideimagegetter/1.0.1/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.zzhoujay.glideimagegetter/glideimagegetter/1.0.1/45d05ea33ac30e2cb46cbfa30d3eb916c4397102/glideimagegetter-1.0.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
