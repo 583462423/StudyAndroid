@@ -23,12 +23,14 @@
         <activity android:name=".view.Intent.IntentTest" />
         <activity android:name=".view.Intent.TmpActivity">
             <intent-filter>
-                <action android:name="com.qxg.test.t1"/>
-                <action android:name="com.qxg.test.t2"/>
-                <category android:name="android.intent.category.DEFAULT"/>
-                <category android:name="com.qxg.category.t1"/>
+                <action android:name="com.qxg.test.t1" />
+                <action android:name="com.qxg.test.t2" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.qxg.category.t1" />
             </intent-filter>
         </activity>
+        <activity android:name=".view.AlertDialog.AlertDialogTest"></activity>
     </application>
 
 </manifest>
