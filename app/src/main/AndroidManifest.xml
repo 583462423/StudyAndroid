@@ -31,7 +31,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".view.AlertDialog.AlertDialogTest" />
-        <activity android:name=".view.ProgressDialog.ProgressDialogTest"></activity>
+        <activity android:name=".view.ProgressDialog.ProgressDialogTest" />
+        <activity android:name=".view.RecyclerView.RecyclerViewTest" />
+        <activity android:name=".view.RecyclerView.SimpleRVActivity"></activity>
     </application>
 
 </manifest>
