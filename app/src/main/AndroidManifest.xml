@@ -33,7 +33,10 @@
         <activity android:name=".view.AlertDialog.AlertDialogTest" />
         <activity android:name=".view.ProgressDialog.ProgressDialogTest" />
         <activity android:name=".view.RecyclerView.RecyclerViewTest" />
-        <activity android:name=".view.RecyclerView.SimpleRVActivity"></activity>
+        <activity android:name=".view.RecyclerView.SimpleRVActivity" />
+        <activity android:name=".view.Fragment.FragmentTest" />
+        <activity android:name=".view.Fragment.SimpleFragmentActivity" />
+        <activity android:name=".view.Fragment.AlterFragmentActivity"></activity>
     </application>
 
 </manifest>
