@@ -1,5 +1,5 @@
 # 简单用法
-1. 首先要自定义Fragment，创建fragment类并继承android.support.v4.app.Fragment，如：
+首先要自定义Fragment，创建fragment类并继承android.support.v4.app.Fragment，如：
 
 ```
 public class SimpleFragment extends Fragment {
@@ -14,7 +14,8 @@ public class SimpleFragment extends Fragment {
 }
 ```
 
-2. 编写R.layout.fragment_simple布局，这里只是显示了一个TextView
+编写R.layout.fragment_simple布局，这里只是显示了一个TextView
+
 ```
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -32,7 +33,7 @@ public class SimpleFragment extends Fragment {
 
 </LinearLayout>
 ```
-3. 在Activity的布局文件中，使用fragment标签将该Fragment引入，注意fragment标签是小写，没有大写，name指定fragment的完整包名。
+在Activity的布局文件中，使用fragment标签将该Fragment引入，注意fragment标签是小写，没有大写，name指定fragment的完整包名。
 
 ```
     <fragment

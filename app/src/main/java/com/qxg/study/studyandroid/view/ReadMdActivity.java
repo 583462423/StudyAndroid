@@ -3,10 +3,9 @@ package com.qxg.study.studyandroid.view;
 import android.content.res.AssetManager;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.widget.TextView;
 
 import com.qxg.study.studyandroid.R;
-import com.zzhoujay.richtext.RichText;
+import com.qxg.study.studyandroid.widget.MarkdownPreviewView;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -20,13 +19,15 @@ public class ReadMdActivity extends AppCompatActivity {
 
 
     @BindView(R.id.md)
-    TextView md;
+    MarkdownPreviewView md;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_read_md);
+
         ButterKnife.bind(this);
+
 
         String name = getIntent().getStringExtra("name");
 
@@ -41,12 +42,11 @@ public class ReadMdActivity extends AppCompatActivity {
                 buffer.append(str);
                 buffer.append("\n");
             }
-            //得到String字符串之后，进行显示
-            RichText.fromMarkdown(buffer.toString()).into(md);
-            
+            md.setMdUrl(buffer.toString(),true);
         } catch (IOException e) {
             e.printStackTrace();
         }
 
     }
+
 }

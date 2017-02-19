@@ -4,12 +4,10 @@
     android:id="@+id/activity_read_md"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="8dp"
     tools:context="com.qxg.study.studyandroid.view.ReadMdActivity">
 
-    <TextView
+    <com.qxg.study.studyandroid.widget.MarkdownPreviewView
         android:id="@+id/md"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
-
+        android:layout_height="wrap_content"></com.qxg.study.studyandroid.widget.MarkdownPreviewView>
 </RelativeLayout>
