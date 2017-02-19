@@ -15,8 +15,8 @@ public class MarkdownPreviewView extends NestedScrollView {
     public WebView mWebView;
     private Context mContext;
     private String url = null;
-    private boolean isFinished = false;
-    private boolean hasParse = false; //已经加载完毕
+    private boolean isFinished = false; //网页初始化是否已经完毕
+    private boolean hasParse = false; //MD是否已经被加载
 
     public MarkdownPreviewView(Context context) {
         super(context);
@@ -54,7 +54,7 @@ public class MarkdownPreviewView extends NestedScrollView {
     public final void setMdUrl(String str,boolean z){
         url = "javascript:parseMarkdown(\"" + str.replace("\n", "\\n").replace("\"", "\\\"").replace("'", "\\'") + "\", " + z + ")";
         if(isFinished && !hasParse){
-            //如果网页加载完毕，但是没有执行parse方法时，在这里执行parse方法
+            //如果网页初始化加载完毕，但是没有执行parse方法来加载md时，在这里执行parse方法
             parseMarkdown(url);
         }
     }
@@ -87,8 +87,7 @@ public class MarkdownPreviewView extends NestedScrollView {
         }
 
         public final void onPageFinished(WebView webView, String str) {
-            //this.mMarkdownPreviewView.mLoadingFinishListener.onLoadingFinish();
-            //加载完毕后，执行parseMarddown方法，其中content就是后来传入的Md内容转换成的url
+            //初始化加载完毕后，执行parseMarddown方法
             isFinished = true;
             if(url != null) {
                 parseMarkdown(url);

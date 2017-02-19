@@ -27,8 +27,6 @@ public class ReadMdActivity extends AppCompatActivity {
         setContentView(R.layout.activity_read_md);
 
         ButterKnife.bind(this);
-
-
         String name = getIntent().getStringExtra("name");
 
         AssetManager as = getAssets();
@@ -42,6 +40,8 @@ public class ReadMdActivity extends AppCompatActivity {
                 buffer.append(str);
                 buffer.append("\n");
             }
+
+            //给md控件传入待解析内容
             md.setMdUrl(buffer.toString(),true);
         } catch (IOException e) {
             e.printStackTrace();

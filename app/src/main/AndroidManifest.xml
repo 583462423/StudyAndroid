@@ -48,7 +48,8 @@
             </intent-filter>
         </receiver>
 
-        <activity android:name=".view.Storage.StorageTest"></activity>
+        <activity android:name=".view.Storage.StorageTest" />
+        <activity android:name=".view.SQLite.SQLiteTest"></activity>
     </application>
 
 </manifest>
