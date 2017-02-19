@@ -2,6 +2,7 @@ package com.qxg.study.studyandroid.adapter;
 
 import android.content.Context;
 import android.content.Intent;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -22,10 +23,16 @@ public class MdAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
     ArrayList<String> mds;
     Context context;
+    int spreadTagColor;
+    int mergeTagColor;
+
 
     public MdAdapter(String[] mds,Context context){
         this.mds = new ArrayList<String>();
         this.context = context;
+        spreadTagColor = ContextCompat.getColor(context,R.color.spread_tag_color);
+        mergeTagColor = ContextCompat.getColor(context,R.color.merge_tag_color);;
+
         for (String now :
                 mds) {
             if(now.endsWith(".md")){
@@ -48,9 +55,12 @@ public class MdAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
             @Override
             public void onClick(View v) {
                 if(((Holder)holder).layout.getVisibility() == View.VISIBLE){
+                    //如果已经展开，就把展开关闭，并把颜色设置为原颜色
                     ((Holder)holder).layout.setVisibility(View.GONE);
+                    ((Holder)holder).tagView.setBackgroundColor(spreadTagColor);
                 }else{
                     ((Holder)holder).layout.setVisibility(View.VISIBLE);
+                    ((Holder)holder).tagView.setBackgroundColor(mergeTagColor);
                 }
             }
         });
@@ -67,7 +77,6 @@ public class MdAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
             @Override
             public void onClick(View v) {
                 //通过反射机制找到测试对象，注意测试对象名字必须是XXXXTest这种样式
-
                 String className = context.getPackageName() + ".view." + name + "." + name + "Test";
                 Log.i("ClassName",className);
                 try {
@@ -92,12 +101,14 @@ public class MdAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
         public View layout;
         public TextView md;
         public TextView test;
+        public View tagView;
         public Holder(View itemView) {
             super(itemView);
             name = (TextView) itemView.findViewById(R.id.name);
             layout = itemView.findViewById(R.id.layout);
             md = (TextView) itemView.findViewById(R.id.md);
             test = (TextView) itemView.findViewById(R.id.test);
+            tagView = itemView.findViewById(R.id.left_tag);
         }
     }
 }

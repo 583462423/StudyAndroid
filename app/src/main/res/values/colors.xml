@@ -4,6 +4,10 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
 
-
+    <color name="black">#000000</color>
     <color name="ccc">#ccc</color>
+    <color name="white">#ffffff</color>
+
+    <color name="spread_tag_color">#898989</color>
+    <color name="merge_tag_color">#FF4081</color>
 </resources>
