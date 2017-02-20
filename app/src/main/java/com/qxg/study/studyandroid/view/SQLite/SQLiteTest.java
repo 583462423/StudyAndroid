@@ -52,12 +52,13 @@ public class SQLiteTest extends AppCompatActivity {
                 break;
 
             case R.id.select_cat:
+                int index = 1;
                 Cursor cursor = db.rawQuery("select * from Cat",null);
                 if(cursor.moveToFirst()){
                     do{
                         String name = cursor.getString(cursor.getColumnIndex("name"));
                         String type = cursor.getString(cursor.getColumnIndex("type"));
-                        Toast.makeText(this, name + "," + type, Toast.LENGTH_SHORT).show();
+                        Toast.makeText(this, index++ + ":" + name + "," + type, Toast.LENGTH_SHORT).show();
                     }while(cursor.moveToNext());
                 }else{
                     Toast.makeText(this, "没有数据", Toast.LENGTH_SHORT).show();

@@ -2,6 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.qxg.study.studyandroid">
 
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+
     <uses-permission-sdk-23 android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission-sdk-23 android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
@@ -49,7 +53,10 @@
         </receiver>
 
         <activity android:name=".view.Storage.StorageTest" />
-        <activity android:name=".view.SQLite.SQLiteTest"></activity>
+        <activity android:name=".view.SQLite.SQLiteTest" />
+        <activity android:name=".view.Process.ProcessTest" />
+        <activity android:name=".view.ContentProvider.ContentProviderTest" />
+        <activity android:name=".view.ContentProvider.ContactsActivity"></activity>
     </application>
 
 </manifest>

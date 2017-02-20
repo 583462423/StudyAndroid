@@ -10,7 +10,7 @@ import android.widget.Toast;
 
 import com.qxg.study.studyandroid.R;
 
-import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by qxg on 17-2-3.
@@ -19,10 +19,10 @@ import java.util.ArrayList;
 public class RVAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
 
-    private ArrayList<String> tmps;
+    private List<String> tmps;
     private Context mContext;
 
-    public RVAdapter(Context context,ArrayList<String> tmps){
+    public RVAdapter(Context context,List<String> tmps){
         mContext = context;
         this.tmps = tmps;
     }
