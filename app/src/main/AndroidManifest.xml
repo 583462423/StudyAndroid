@@ -4,7 +4,7 @@
 
     <uses-permission android:name="android.permission.CALL_PHONE" />
     <uses-permission android:name="android.permission.CAMERA" />
-    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
 
     <uses-permission-sdk-23 android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission-sdk-23 android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
@@ -14,6 +14,7 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
+
         android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
         <activity android:name=".view.MainActivity">
             <intent-filter>
@@ -56,7 +57,16 @@
         <activity android:name=".view.SQLite.SQLiteTest" />
         <activity android:name=".view.Process.ProcessTest" />
         <activity android:name=".view.ContentProvider.ContentProviderTest" />
-        <activity android:name=".view.ContentProvider.ContactsActivity"></activity>
+        <activity android:name=".view.ContentProvider.ContactsActivity" />
+
+        <provider
+            android:name=".provider.MyProvider"
+            android:authorities="com.qxg.study.studyandroid.provider"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name=".view.ContentProvider.CatActivity" />
+        <activity android:name=".view.Notification.NotificationTest"></activity>
     </application>
 
 </manifest>

@@ -20,13 +20,14 @@ public class ContentProviderTest extends AppCompatActivity {
 
     }
 
-    @OnClick({R.id.get_contact, R.id.tmp})
+    @OnClick({R.id.get_contact, R.id.get_cat})
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.get_contact:
                 startActivity(new Intent(ContentProviderTest.this,ContactsActivity.class));
                 break;
-            case R.id.tmp:
+            case R.id.get_cat:
+                startActivity(new Intent(ContentProviderTest.this,CatActivity.class));
                 break;
         }
     }

@@ -6,8 +6,13 @@
     android:layout_height="match_parent"
     tools:context="com.qxg.study.studyandroid.view.ReadMdActivity">
 
-    <com.qxg.study.studyandroid.widget.MarkdownPreviewView
+    <com.mittsu.markedview.MarkedView
         android:id="@+id/md"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"></com.qxg.study.studyandroid.widget.MarkdownPreviewView>
+        android:layout_height="match_parent"></com.mittsu.markedview.MarkedView>
+
+    <!--<com.qxg.study.studyandroid.widget.MarkdownPreviewView-->
+        <!--android:id="@+id/md"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"></com.qxg.study.studyandroid.widget.MarkdownPreviewView>-->
 </RelativeLayout>

@@ -4,8 +4,8 @@ import android.content.res.AssetManager;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
+import com.mittsu.markedview.MarkedView;
 import com.qxg.study.studyandroid.R;
-import com.qxg.study.studyandroid.widget.MarkdownPreviewView;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -18,8 +18,10 @@ import butterknife.ButterKnife;
 public class ReadMdActivity extends AppCompatActivity {
 
 
+//    @BindView(R.id.md)
+//    MarkdownPreviewView md;
     @BindView(R.id.md)
-    MarkdownPreviewView md;
+    MarkedView md;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,7 +44,9 @@ public class ReadMdActivity extends AppCompatActivity {
             }
 
             //给md控件传入待解析内容
-            md.setMdUrl(buffer.toString(),true);
+            //md.setMdUrl(buffer.toString(),true);
+
+            md.setMDText(buffer.toString());
         } catch (IOException e) {
             e.printStackTrace();
         }
