@@ -5,7 +5,7 @@
     <uses-permission android:name="android.permission.CALL_PHONE" />
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
-    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.CAMERA" />
 
     <uses-permission-sdk-23 android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission-sdk-23 android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
@@ -78,6 +78,7 @@
         <activity android:name=".view.ContentProvider.CatActivity" />
         <activity android:name=".view.Notification.NotificationTest" />
         <activity android:name=".view.Camera.CameraTest" />
+        <activity android:name=".view.Music.MusicTest" android:launchMode="singleTask"></activity>
     </application>
 
 </manifest>
