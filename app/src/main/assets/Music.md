@@ -35,3 +35,23 @@
 注意,谨慎使用stop()方法,使用stop()后,该MediaPlayer对象就无法再播放其他音乐文件,一旦你选择播放,软件就会崩溃.
 
 
+
+# 播放视频
+
+播放视频和播放音乐基本一样,只是播放视频需要的是VideoView,其方法有:
+
+* setVideoPath() 设置要播放的视频文件的位置
+* start() 开始或继续播放视频
+* pause() 暂停播放视频
+* resume() 将视频重头开始播放
+* seekTo() 从指定的位置开始播放视频
+* isPlaying() 判断当前是否正在播放视频
+* getDuration() 获取载入的视频文件的时长
+
+选择视频:
+```
+Intent i = new Intent(Intent.ACTION_PICK, android.provider.MediaStore.Video.Media.EXTERNAL_CONTENT_URI);
+startActivityForResult(i, REQUEST_CODE); 
+```
+
+就不再做演示了.

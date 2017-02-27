@@ -78,7 +78,26 @@
         <activity android:name=".view.ContentProvider.CatActivity" />
         <activity android:name=".view.Notification.NotificationTest" />
         <activity android:name=".view.Camera.CameraTest" />
-        <activity android:name=".view.Music.MusicTest" android:launchMode="singleTask"></activity>
+        <activity
+            android:name=".view.Music.MusicTest"
+            android:launchMode="singleTask" />
+        <activity android:name=".view.Service.ServiceTest" />
+
+        <service
+            android:name=".view.Service.MyService"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".view.Service.BindService"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".view.Service.ForegroundService"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".view.Service.MyIntentService"
+            android:exported="false"></service>
     </application>
 
 </manifest>
